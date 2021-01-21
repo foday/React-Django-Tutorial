@@ -1,8 +1,8 @@
 import React, { Component } from "react"
-import { render } from "react-dom"
+import { render } from "react-dom";
 import HomePage from "./HomePage";
-import RoomJoinpage from "./RoomJoinPage";
-import CreateRoomPage from "./CreateRoomPage"
+import RoomJoinPage from "./RoomJoinPage";
+import CreateRoomPage from "./CreateRoomPage";
 
 export default class App extends Component {
     constructor(props) {
@@ -13,7 +13,7 @@ export default class App extends Component {
         return(
             <div>
                 <HomePage />
-                <RoomJoinpage />
+                <RoomJoinPage />
                 <CreateRoomPage />
             </div>
         );
