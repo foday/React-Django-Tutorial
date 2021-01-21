@@ -4,3 +4,4 @@ from django.urls import include, path
 
 urlpatterns = [
     path('room', RoomView.as_view()),
+]
