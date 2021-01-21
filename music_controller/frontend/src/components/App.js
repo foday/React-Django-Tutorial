@@ -3,6 +3,9 @@ import { render } from "react-dom";
 import HomePage from "./HomePage";
 import RoomJoinPage from "./RoomJoinPage";
 import CreateRoomPage from "./CreateRoomPage";
+import {
+    BrowserRouter as Router, 
+    Switch, Route, Link, Redirect} from "react-router-dom"
 
 export default class App extends Component {
     constructor(props) {
@@ -11,11 +14,16 @@ export default class App extends Component {
 
     render() {
         return(
-            <div>
-                <HomePage />
-                <RoomJoinPage />
-                <CreateRoomPage />
-            </div>
+            <Router>
+                <Switch>
+                    <Route exact path="/">
+                        <p>This is the homepage</p>
+                    </Route>
+                    <Route path="/join" component={RoomJoinPage}/>
+                    <Route path="/create" component={CreateRoomPage}/>
+
+                </Switch>
+            </Router>
         );
     }
 }
